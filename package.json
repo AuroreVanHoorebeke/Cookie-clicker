@@ -1,0 +1,34 @@
+{
+  "name": "cookieclicker",
+  "version": "1.0.0",
+  "description": "A React cookie clicker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AuroreVanHoorebeke/Cookie-clicker.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "AuroreVanHoorebeke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AuroreVanHoorebeke/Cookie-clicker/issues"
+  },
+  "homepage": "https://github.com/AuroreVanHoorebeke/Cookie-clicker#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+  }
+}
