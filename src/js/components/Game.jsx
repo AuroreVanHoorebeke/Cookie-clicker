@@ -18,12 +18,11 @@ class Game extends React.Component {
     }
 
     incrementCookie = () => {
-        console.log(this.state);
         this.setState({
             amount: this.state.amount + 1
         });
     }
-
+    
     autoIncrement = setInterval(() => {
         this.setState((state) =>{
             return {
@@ -35,8 +34,6 @@ class Game extends React.Component {
 
     buyItem = (id) => {
         if(this.state.amount >= this.state.items[id].price){
-
-            console.log(this.state.items[id])
 
             this.setState({
 
