@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CookieButton from './CookieButton.jsx';
+import cookieButton from '../../img/fullcookieIcon.png';
 
 class Game extends React.Component {
     constructor(props) {
@@ -64,7 +64,7 @@ class Game extends React.Component {
         return (
             <>
                 <div className="cookieBox">
-                    <button className="cookie" onClick={this.incrementCookie}>Click me!</button>
+                    <img src={cookieButton} className="cookie" onClick={this.incrementCookie}/>
                     <div>Cookies: {this.state.amount}</div>
                     <div>Cookies/sec: {this.state.prodSpeed}</div>
                 </div>
