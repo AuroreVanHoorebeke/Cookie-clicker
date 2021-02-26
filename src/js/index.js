@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../index.css';
 
 import Header from './components/Header.jsx'
 import GameDisplay from './components/GameDisplay.jsx'
