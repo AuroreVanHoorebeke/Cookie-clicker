@@ -9,10 +9,10 @@ class Game extends React.Component {
             amount: 0,
             prodSpeed: 0,
             items: [
-                {id: 0, name: 'Apprentice', qty: 0, price: 10, cookiesSec: 5, func: this.buyItem},
-                {id: 1, name: 'Baker', qty: 0, price: 250, cookiesSec: 10, func: this.buyItem},
-                {id: 2, name: 'Oven', qty: 0, price: 500, cookiesSec: 15, func: this.buyItem},
-                {id: 3, name: 'Bakery', qty: 0, price: 2000, cookiesSec: 30, func: this.buyItem}
+                {id: 0, name: 'apprentice', qty: 0, price: 10, cookiesSec: 5, func: this.buyItem},
+                {id: 1, name: 'baker', qty: 0, price: 250, cookiesSec: 10, func: this.buyItem},
+                {id: 2, name: 'oven', qty: 0, price: 500, cookiesSec: 15, func: this.buyItem},
+                {id: 3, name: 'bakery', qty: 0, price: 2000, cookiesSec: 30, func: this.buyItem}
             ]
         }
     }
