@@ -1,6 +1,6 @@
 import React from 'react';
+import '../../index.css';
 
-import CookieButton from './CookieButton.jsx';
 import Game from './Game.jsx';
 
 export default function GameDisplay(props){
