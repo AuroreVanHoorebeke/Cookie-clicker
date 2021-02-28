@@ -23,14 +23,20 @@ class Game extends React.Component {
         });
     }
     
-    autoIncrement = setInterval(() => {
-        this.setState((state) =>{
+
+
+
+    autoIncrementCookies() {
+        this.setState(() => {
             return {
                 amount: this.state.amount += this.state.prodSpeed
             }
         })
-    },1000)
+    }
 
+    incrementInterval = setInterval(() => {
+        this.autoIncrementCookies();
+    },1000)
 
     buyItem = (id) => {
         if(this.state.amount >= this.state.items[id].price){
