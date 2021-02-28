@@ -58,9 +58,9 @@ class Game extends React.Component {
     render(){
             const itemList = this.state.items.map((item) =>(
                 <div>
-                    <div className="apprentice">
+                    <div className={item.name}>
                         <h3>{item.name}</h3>
-                        <button className="buyApprentice" onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
+                        <button className={`buy-${item.name}`} onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
                         <p>qty {item.qty}</p>
                         <p>price {item.price}</p>
                         <p>cookies/sec {item.cookiesSec}</p>
