@@ -1,6 +1,6 @@
 import React from 'react'
 
-import cookieButton from '../../img/fullcookieIcon.png';
+import cookie from '../../img/fullcookieIcon.png';
 import '../../index.css';
 
 class Game extends React.Component {
