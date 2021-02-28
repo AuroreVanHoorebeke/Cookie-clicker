@@ -72,6 +72,12 @@ class Game extends React.Component {
                 </div>
             ))
 
+        const itemStats = this.state.items.map((item) =>(
+                <div className={`stats-${item.name}`}>
+                        <h3 className="ml-5 mr-5">{this.Capitalize(item.name)} {item.qty}</h3>
+                </div>
+            ))
+
         return (
             <>
                 <div className="cookieBox">
