@@ -80,11 +80,20 @@ class Game extends React.Component {
 
         return (
             <>
-                <div className="cookieBox">
-                    <img src={cookieButton} className="cookie" onClick={this.incrementCookie}/>
-                    <div>Cookies: {this.state.amount}</div>
-                    <div>Cookies/sec: {this.state.prodSpeed}</div>
+                <div className="statsBar flex flex-row justify-between bg-yellow-50 rounded-md m-2 object-contain">
+                    <div className="cookieStats flex flex-row">
+                        <div className="ml-5 mr-5">Cookies: {this.state.amount}</div>
+                        <div className="ml-5 mr-5">Cookies/sec: {this.state.prodSpeed}</div>
+                    </div>
+
+                    <div className="itemStats flex flex-row">
+                        { itemStats }
+                    </div>
                 </div>
+                <div className="flex flex-row justify-evenly">
+                    <div className="cookieBox flex items-center m-auto">
+                        <img src={cookie} className="cookie transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" onClick={this.incrementCookie}/>
+                    </div>
 
                 <div className="items">
                     {itemList}
