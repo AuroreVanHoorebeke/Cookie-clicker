@@ -61,12 +61,14 @@ class Game extends React.Component {
 
     render(){
             const itemList = this.state.items.map((item) =>(
-                <div>
+                <div className="py-5">
                     <div className={`item-${item.name}`}>
-                        <h3>{this.Capitalize(item.name)}</h3>
-                        <button className={`buy-${item.name}`} onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
+                        <div className="flex justify-between m-auto">
+                            <h3 className="font-semibold mr-5">{this.Capitalize(item.name)}</h3>
+                            <button className={`buy-${item.name} rounded-md p-1 transition duration-500 ease-in-out bg-yellow-700 hover:bg-yellow-900 transform hover:-translate-y-1 hover:scale-110`} onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
+                        </div>
                         <p>qty {item.qty}</p>
-                        <p>price {item.price}</p>
+                        <p id="priceItem">price {item.price}</p>
                         <p>cookies/sec {item.cookiesSec}</p>
                     </div>
                 </div>
@@ -95,8 +97,9 @@ class Game extends React.Component {
                         <img src={cookie} className="cookie transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" onClick={this.incrementCookie}/>
                     </div>
 
-                <div className="items">
-                    {itemList}
+                    <div className="items bg-yellow-50 rounded-md m-2 p-5">
+                        {itemList}
+                    </div>
                 </div>
             </>
         )
