@@ -2,6 +2,8 @@ import React from 'react'
 
 import cookie from '../../img/fullcookieIcon.png';
 import '../../index.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCookie, faStore, faUserNinja, faChild, faFireExtinguisher, faClock} from '@fortawesome/free-solid-svg-icons'
 
 class Game extends React.Component {
     constructor(props) {
@@ -10,10 +12,10 @@ class Game extends React.Component {
             amount: 0,
             prodSpeed: 0,
             items: [
-                {id: 0, name: 'apprentice', qty: 0, price: 100, cookiesSec: 5, func: this.buyItem},
-                {id: 1, name: 'baker', qty: 0, price: 250, cookiesSec: 10, func: this.buyItem},
-                {id: 2, name: 'oven', qty: 0, price: 500, cookiesSec: 15, func: this.buyItem},
-                {id: 3, name: 'bakery', qty: 0, price: 2000, cookiesSec: 30, func: this.buyItem}
+                {id: 0, name: 'fire extinguisher', icon: faFireExtinguisher, qty: 0, price: 50, cookiesSec: 5, func: this.buyItem},
+                {id: 1, name: 'apprentice', icon: faChild, qty: 0, price: 250, cookiesSec: 10, func: this.buyItem},
+                {id: 2, name: 'baker', icon:faUserNinja,qty: 0, price: 500, cookiesSec: 15, func: this.buyItem},
+                {id: 3, name: 'bakery', icon:faStore, qty: 0, price: 2000, cookiesSec: 30, func: this.buyItem}
             ]
         }
     }
@@ -62,8 +64,8 @@ class Game extends React.Component {
                 <div className="py-5">
                     <div className={`item-${item.name}`}>
                         <div className="flex justify-between m-auto">
-                            <h3 className="font-semibold mr-5">{this.Capitalize(item.name)}</h3>
-                            <button className={`buy-${item.name} rounded-md p-1 transition duration-500 ease-in-out bg-yellow-700 hover:bg-yellow-900 transform hover:-translate-y-1 hover:scale-110`} onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
+                            <h3 className="font-semibold mr-5">{this.Capitalize(item.name)} <FontAwesomeIcon icon={item.icon} /></h3>
+                            <button className={`buy-${item.name} rounded-md p-1 transition duration-500 ease-in-out bg-yellow-700 hover:bg-yellow-900 transform hover:-translate-y-1 hover:scale-110`} onClick={() => this.buyItem(item.id)}>Buy</button>
                         </div>
                         <p>qty {item.qty}</p>
                         <p id="priceItem">price {item.price}</p>
@@ -74,7 +76,7 @@ class Game extends React.Component {
 
         const itemStats = this.state.items.map((item) =>(
                 <div className={`stats-${item.name}`}>
-                        <h3 className="ml-5 mr-5">{this.Capitalize(item.name)} {item.qty}</h3>
+                        <h3 className="ml-5 mr-5"><FontAwesomeIcon icon={item.icon} /> {item.qty}</h3>
                 </div>
             ))
 
@@ -82,8 +84,8 @@ class Game extends React.Component {
             <>
                 <div className="statsBar flex flex-row justify-between bg-yellow-50 rounded-md m-2 object-contain">
                     <div className="cookieStats flex flex-row">
-                        <div className="ml-5 mr-5">Cookies: {this.state.amount}</div>
-                        <div className="ml-5 mr-5">Cookies/sec: {this.state.prodSpeed}</div>
+                        <div className="ml-5 mr-5"><FontAwesomeIcon icon={faCookie} /> {this.state.amount}</div>
+                        <div className="ml-5 mr-5"><FontAwesomeIcon icon={faCookie} /> <FontAwesomeIcon icon={faClock} /> {this.state.prodSpeed}</div>
                     </div>
 
                     <div className="itemStats flex flex-row">
