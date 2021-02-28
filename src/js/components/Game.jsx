@@ -23,8 +23,6 @@ class Game extends React.Component {
             amount: this.state.amount + 1
         });
     }
-    
-
 
 
     autoIncrementCookies() {
