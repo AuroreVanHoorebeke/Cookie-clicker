@@ -67,9 +67,9 @@ class Game extends React.Component {
                             <h3 className="font-semibold mr-5">{this.Capitalize(item.name)} <FontAwesomeIcon icon={item.icon} /></h3>
                             <button className={`buy-${item.name} rounded-md p-1 transition duration-500 ease-in-out bg-yellow-700 hover:bg-yellow-900 transform hover:-translate-y-1 hover:scale-110`} onClick={() => this.buyItem(item.id)}>Buy</button>
                         </div>
-                        <p>qty {item.qty}</p>
-                        <p id="priceItem">price {item.price}</p>
-                        <p>cookies/sec {item.cookiesSec}</p>
+                        <p>Quantity {item.qty}</p>
+                        <p id="priceItem">Price {item.price}</p>
+                        <p>Cookies/sec {item.cookiesSec}</p>
                     </div>
                 </div>
             ))
