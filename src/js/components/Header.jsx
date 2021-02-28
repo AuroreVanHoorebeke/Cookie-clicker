@@ -3,8 +3,10 @@ import React from 'react'
 export default function Header(props){
         return(
         <>
-            <h1>Cookie clicker</h1>
-            <h2>{props.user}'s bakery</h2>
+            <div className="header flex flex-row justify-between">
+                <div className="m-5">Cookie clicker</div>
+                <div className="m-5">{props.user}'s bakery</div>
+            </div>
         </>
         );
 }
