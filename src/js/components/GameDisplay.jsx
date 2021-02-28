@@ -6,7 +6,7 @@ import Game from './Game.jsx';
 export default function GameDisplay(props){
     return(
         <>
-            <div className="clickingZone">
+            <div className="clickingZone bg-yellow-900 p-5">
                 <Game />
             </div>
         </>
