@@ -55,11 +55,15 @@ class Game extends React.Component {
         }
     }
 
+    Capitalize(str){
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     render(){
             const itemList = this.state.items.map((item) =>(
                 <div>
-                    <div className={item.name}>
-                        <h3>{item.name}</h3>
+                    <div className={`item-${item.name}`}>
+                        <h3>{this.Capitalize(item.name)}</h3>
                         <button className={`buy-${item.name}`} onClick={() => this.buyItem(item.id)}>Buy {item.name}</button>
                         <p>qty {item.qty}</p>
                         <p>price {item.price}</p>
