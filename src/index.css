@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.cookie:active {
+    transition: 0.10s;
+    transform: scale(0.9);
+}
+button:active {
+    transition: 0.10s;
+    transform: scale(0.9);
+}
