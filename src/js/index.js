@@ -15,6 +15,8 @@ ReactDOM.render(
         <Header user={user}/>
 
         <GameDisplay />
+
+        <Footer />
     </>,
     app
 );
