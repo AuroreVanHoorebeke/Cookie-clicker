@@ -85,7 +85,7 @@ class Game extends React.Component {
                 <div className="statsBar flex flex-row justify-between bg-yellow-50 rounded-md m-2 object-contain">
                     <div className="cookieStats flex flex-row">
                         <div className="ml-5 mr-5"><FontAwesomeIcon icon={faCookie} /> {this.state.amount}</div>
-                        <div className="ml-5 mr-5"><FontAwesomeIcon icon={faCookie} /> <FontAwesomeIcon icon={faClock} /> {this.state.prodSpeed}</div>
+                        <div className="ml-5 mr-5"><FontAwesomeIcon icon={faCookie} /> / sec {this.state.prodSpeed}</div>
                     </div>
 
                     <div className="itemStats flex flex-row">
@@ -94,7 +94,7 @@ class Game extends React.Component {
                 </div>
                 <div className="flex flex-row justify-evenly">
                     <div className="cookieBox flex items-center m-auto">
-                        <img src={cookie} className="cookie transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" onClick={this.incrementCookie}/>
+                        <img src={cookie} className="cookie transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 p-15" onClick={this.incrementCookie}/>
                     </div>
 
                     <div className="items bg-yellow-50 rounded-md m-2 p-5">
