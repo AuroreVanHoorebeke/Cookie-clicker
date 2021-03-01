@@ -2,6 +2,7 @@ import React from 'react';
 import '../../index.css';
 
 import Game from './Game.jsx';
+import '../../index.css';
 
 export default function GameDisplay(props){
     return(
